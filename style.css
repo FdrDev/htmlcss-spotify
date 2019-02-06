@@ -1,0 +1,124 @@
+*{box-sizing: border-box; padding: 0; margin:0; }
+
+body{font-family: 'Varela Round', sans-serif; color:white;}
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-main{
+  display: flex;
+  flex: row;
+  height: 100%;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  height: 100vh;
+  background-color:#090B12;
+}
+
+.navbar-group{
+  display: flex;
+  height: 30%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.maincontent{
+  background: linear-gradient(to right, #741c8e 0%,#45294c 44%,#18192d 99%);
+  flex-basis: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+}
+
+.logo>img{
+  margin: 15px 0;
+  height: 40px;
+  width:120px;
+}
+
+li span{
+  display: inline-block;
+  text-align: center;
+  color:white;
+}
+
+
+.button{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.button button{
+  background-color: inherit;
+  color:white;
+  padding: 5px;
+  border-radius: 12px;
+  margin: 5px 15px;
+}
+
+#iscriviti{
+  background-color: white;
+  color: black;
+}
+
+.player-footer{
+  background-color: grey;
+  position:fixed;
+  width: 100vw;
+  height: 150px;
+  bottom:0;
+}
+
+.now-playing-album{
+  background-color: red;
+  width: 30%;
+  height: 150px;
+}
+
+.navbar-main li{
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+}
+
+.navbar-main ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 150px;
+}
+
+.createfor h2{
+  font-size: 50px;
+  padding:0 50px;
+}
+
+.album-cover{
+  height: 150px;
+  width: 150px;
+  display:flex;
+  justify-content: space-evenly; 
+  background-image: url('https://lineup-images.scdn.co/tastebreakers_DEFAULT-it.jpg');
+  background-size: cover;
+}
+
+.container-album{
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  text-align: center;
+  padding:0 50px;
+
+}
