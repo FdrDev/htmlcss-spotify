@@ -5,11 +5,11 @@ body{font-family: 'Varela Round', sans-serif; color:white;}
 .main{
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 100px);
 }
 
 .sub-main{
   display: flex;
-  flex: row;
   height: 100%;
 }
 
@@ -17,7 +17,7 @@ body{font-family: 'Varela Round', sans-serif; color:white;}
   display: flex;
   flex-direction: column;
   flex-basis: 20%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background-color:#090B12;
 }
 
@@ -43,9 +43,9 @@ body{font-family: 'Varela Round', sans-serif; color:white;}
 .maincontent{
   background: linear-gradient(to right, #166770 0%,#151121 100%);
   flex-basis: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .logo{
@@ -86,12 +86,22 @@ li span{
   color: black;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .navbar-main li{
   list-style-type: none;
   display: inline-block;
   color: white;
   font-size: 12px;
 }
+
+.navbar-main a:hover{
+  border-bottom: 2px solid green;
+}
+
 .navbar-main ul{
   display: flex;
   justify-content: space-evenly;
@@ -184,25 +194,67 @@ li span{
   font-size: 35px;
 }
 
+.progressbarfix{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .progress-bar{
   height: 3px;
   background-color: grey;
   border-bottom: 3px solid grey;
   width: 80%;
   margin: 20px 0;
+  position: relative;
 }
 
-.progress-bar::before{
-  content: "00:00";
-}
-
-.progress-bar::after{
-  content: "00:00";
-}
 
 .volume{
   display: flex;
   justify-content: center;
   align-items:center;
   flex-basis: 25%;
+}
+
+.hambmenu{
+  display: none;
+
+}
+
+.hamb{
+  background-color: white;
+  height: 3px;
+  margin: 3px 0;
+  width: 20px;
+}
+
+
+
+
+@media screen and (max-width:960px) {
+  .navbar-main li {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width:720px) {
+  .sidebar{
+    display: none;
+  }
+
+  .navbar-main ul{
+    display: none;
+  }
+
+  .hambmenu{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-top: 15px;
+  }
 }
