@@ -45,6 +45,7 @@ body{font-family: 'Varela Round', sans-serif; color:white;}
   flex-basis: 100%;
   height: 100vh;
   flex-direction: column;
+  overflow: auto;
 }
 
 .logo{
@@ -124,7 +125,6 @@ li span{
 .container-album{
   display: flex;
   flex-wrap: wrap;
-  height: 200px;
   text-align: center;
   padding:0 50px;
 }
